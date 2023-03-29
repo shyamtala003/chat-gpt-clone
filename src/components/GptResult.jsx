@@ -1,7 +1,7 @@
 import React from "react";
 import gptLogo from "../assets/ChatGPTLogo.webp";
 
-export const GptResult = ({ result }) => {
+const GptResult = ({ result }) => {
   return (
     <>
       <div className="query_container reply">
@@ -11,3 +11,5 @@ export const GptResult = ({ result }) => {
     </>
   );
 };
+
+export default GptResult;
