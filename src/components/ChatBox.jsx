@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GptResult from "./GptResult";
-import UserSearchQuery from "./userSearchQuery";
+import UserSearchQuery from "./UserSearchQuery";
 
 const ChatBox = () => {
   let [searchValue, setSearchValue] = useState("");
