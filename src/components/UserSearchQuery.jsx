@@ -1,7 +1,7 @@
 import React from "react";
 import userImage from "../assets/mypic.png";
 
-export const UserSearchQuery = ({ query }) => {
+const UserSearchQuery = ({ query }) => {
   return (
     <>
       <div className="query_container">
@@ -11,3 +11,5 @@ export const UserSearchQuery = ({ query }) => {
     </>
   );
 };
+
+export default UserSearchQuery;
