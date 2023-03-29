@@ -4,6 +4,7 @@ import UserSearchQuery from "./UserSearchQuery";
 
 const ChatBox = () => {
   let [searchValue, setSearchValue] = useState("");
+
   return (
     <>
       <section className="chat_container">
@@ -48,19 +49,21 @@ const ChatBox = () => {
         </section>
 
         {/* element for getting value from user */}
-        <div className="chat_input_form">
-          <input
-            type="text"
-            onChange={(e) => {
-              setSearchValue(e.currentTarget.value);
-            }}
-            value={searchValue}
-            placeholder="Search Here"
-            className="chat_input"
-          />
-          <button className="chat_send">
-            <ion-icon name="navigate-outline" id="send"></ion-icon>
-          </button>
+        <div className="bottom_chat_section">
+          <div className="chat_input_form">
+            <input
+              type="text"
+              onChange={(e) => {
+                setSearchValue(e.currentTarget.value);
+              }}
+              value={searchValue}
+              placeholder="Search Here"
+              className="chat_input"
+            />
+            <button className="chat_send">
+              <ion-icon name="navigate-outline" id="send"></ion-icon>
+            </button>
+          </div>
         </div>
       </section>
     </>

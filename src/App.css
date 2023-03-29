@@ -121,7 +121,6 @@ button#new_chat:hover {
 
 .chat_history {
   width: 100%;
-  height: 300px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -189,13 +188,17 @@ button#new_chat:hover {
   overflow-y: auto;
 }
 
-.chat_input_form {
+.bottom_chat_section {
+  width: 100%;
+  background: linear-gradient(transparent, var(--bg-primary));
   position: absolute;
-  bottom: 5%;
-  left: 50%;
+  bottom: 0%;
+  left: 0%;
   z-index: 8;
-  transform: translateX(-50%);
-  width: 60%;
+}
+.chat_input_form {
+  width: 80%;
+  margin: 10px auto;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr;
@@ -212,7 +215,6 @@ button#new_chat:hover {
 }
 
 .chat_send {
-  padding: 8px;
   display: grid;
   place-items: center;
   color: var(--text-secondary);
@@ -231,6 +233,19 @@ button#new_chat:hover {
   padding-bottom: 10%;
   overflow-y: auto;
   /* background: #40414f; */
+}
+
+.conversation_container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.conversation_container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversation_container::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--bg-secondary);
 }
 
 .query_container {
@@ -275,14 +290,14 @@ p.query_text {
     width: 100vw;
     grid-template-columns: auto minmax(20%, 1fr);
     grid-template-rows: 1fr;
+    z-index: 99;
     grid-template-areas: "nav slide_close";
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
   }
 
   .navbar_open {
     top: 0;
     left: 0;
-    z-index: 99;
   }
 
   .navbar .nav {
@@ -297,8 +312,7 @@ p.query_text {
     display: flex;
     width: 100%;
     height: 100vh;
-    background: #3435415f;
-    backdrop-filter: blur(5px);
+    background: #494a58bf;
     cursor: pointer;
   }
 
@@ -315,8 +329,11 @@ p.query_text {
     --ionicon-stroke-width: 36px;
   }
 
-  .chat_input_form {
-    width: 90%;
-    bottom: 10%;
+  .bottom_chat_section {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 0%;
+    z-index: 8;
   }
 }
